@@ -2,6 +2,7 @@ import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Link } from "react-router-dom";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -14,16 +15,20 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const cart = () => {
   return (
-    <IconButton aria-label="cart" sx={{
-      marginLeft: 8,
-      minWidth: 100,
-      display: "flex",
-    }}>
-      <StyledBadge badgeContent={0} color="secondary"
+    <Link to="/Cart">
+      <IconButton
+        aria-label="cart"
+        sx={{
+          marginLeft: 8,
+          minWidth: 100,
+          display: "flex",
+        }}
       >
-        <ShoppingCartIcon />
-      </StyledBadge>
-    </IconButton>
+        <StyledBadge badgeContent={0} color="secondary">
+          <ShoppingCartIcon />
+        </StyledBadge>
+      </IconButton>
+    </Link>
   );
 };
 

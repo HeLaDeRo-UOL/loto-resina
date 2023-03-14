@@ -10,6 +10,7 @@ import UlItems from "./ComponentsNavBar/UlItems";
 import Cart from "./ComponentsNavBar/Cart";
 import Logo from "./ComponentsNavBar/Logo";
 
+import { Link } from "react-router-dom";
 const navbar = () => {
   return (
     <Box sx={{ minWidth: 80 }}>
@@ -51,23 +52,25 @@ const navbar = () => {
             <MenuIcon />
           </IconButton>
           <Logo />
-          <Typography
-            variant="h6"
-            component="div"
-            width={170}
-            marginLeft={3}
-            marginRight={3}
-            sx={{
-              mr: 0.1,
-              display: { xs: "none", sm: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 500,
+          <Link to="/">
+            <Typography
+              variant="h6"
+              component="div"
+              width={170}
+              marginLeft={3}
+              marginRight={3}
+              sx={{
+                mr: 0.1,
+                display: { xs: "none", sm: "none", md: "flex" },
+                fontFamily: "monospace",
+                fontWeight: 500,
 
-              color: "inherit",
-            }}
-          >
-            Loto de Resina
-          </Typography>
+                color: "inherit",
+              }}
+            >
+              Loto de Resina
+            </Typography>
+          </Link>
           <UlItems />
           <Button
             color="inherit"
