@@ -22,6 +22,7 @@ function App() {
         <Route path="*" element={<h1>Error : 404 "not found"</h1>} />
         <Route path="/Formulario" element = {<Form/>}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
